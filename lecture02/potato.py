@@ -1,4 +1,4 @@
-user_input = input('Give me a number from 0 to 99: ')
+user_input = input("Give me a number from 0 to 99: ")
 user_input = user_input.replace(" ", "")
 if user_input.isnumeric():
 	user_input = int(user_input)
@@ -226,6 +226,6 @@ else:
 			if user_input.isnumeric():
 				print("This number is not in the range.")
 			else:
-				print("The input is either not a number or it's something complex (e.g. --1) that the program cannot handle yet.")
+				print("The input is either not a number or is something complex (e.g. --1) that the program cannot handle yet.")
 	else:
 		print("It's not a number.")
