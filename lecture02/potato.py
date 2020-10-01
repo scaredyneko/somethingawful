@@ -3,7 +3,6 @@ user_input = user_input.replace(' ', '')
 
 if user_input.isnumeric():
 	user_input = int(user_input)
-	
 	if 0 <= user_input <= 99:
 		first_digit = user_input // 10
 		second_digit = user_input % 10
