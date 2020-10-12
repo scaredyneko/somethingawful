@@ -32,4 +32,4 @@ if temperature[-1] == "C":
 else:
     print(f"Converted to Celsius it would be: {(numeric_part - 32) * 5 / 9}C")
     if numeric_part < -459.67:
-        print("Although it's not likely that this type of temperature is possible in nature though.")
+        print("Although it's not likely that this kind of temperature is possible in nature though.")
