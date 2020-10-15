@@ -1,6 +1,6 @@
 temperature = input("Provide a temperature: ")
 
-if temperature[-1] not in 'CF' or len(temperature) < 2:  # 1C
+if temperature[-1] not in ['C', 'F'] or len(temperature) < 2:  # 1C
     print("Wrong input. Specify a scale (C or F).")
     exit(1)
 
