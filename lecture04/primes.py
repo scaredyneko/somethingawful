@@ -16,8 +16,7 @@ while not appropriate:
                 
     if appropriate:
         n = int(n[:n.find('.') if n.count('.') == 1 else len(n)])
-        
-        if n < 2:
+        if n <= 2:
             print('Try again.')
             appropriate = False
         
