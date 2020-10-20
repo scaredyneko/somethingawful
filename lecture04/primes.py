@@ -1,3 +1,5 @@
+import datetime
+
 # получение значения n и проверка на наличие ошибок
 appropriate = False
 
@@ -20,6 +22,8 @@ while not appropriate:
             print("Try again.")
             appropriate = False
 
+start_time = datetime.datetime.now()
+
 # создание нового файла и/или удаление из него содержимого
 with open('primes.txt', 'w'):
     pass
@@ -31,13 +35,18 @@ prime_numbers = list(range(2, n))
 for element in prime_numbers:
     if element * element >= n:
         break
-    for number in prime_numbers[element * element::element]:
-        prime_numbers.remove(number)
+    for number in prime_numbers[prime_numbers.index(element * element)::]:
+        if number % element == 0:
+            prime_numbers.remove(number)
 
 # запись простых чисел в файл
 for prime in prime_numbers:
     with open('primes.txt', 'a') as text_file:
         text_file.write(str(prime) + '\n')
 
+end_time = datetime.datetime.now()
+
 # уведомление о завершении работы
 print("Done.")
+
+print(end_time - start_time)
