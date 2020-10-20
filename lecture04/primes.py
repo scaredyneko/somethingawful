@@ -35,7 +35,7 @@ prime_numbers = list(range(2, n))
 for element in prime_numbers:
     if element * element >= n:
         break
-    for number in prime_numbers[prime_numbers.index(element * element)::]:
+    for number in prime_numbers[prime_numbers.index(element * element):]:
         if number % element == 0:
             prime_numbers.remove(number)
 
